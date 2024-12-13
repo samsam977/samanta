@@ -464,4 +464,100 @@ header nav ul li a:hover {
         grid-template-columns: 1fr; /* 1 column for small screens */
     }
 }
+.about-nisu {
+    max-width: 800px;
+    margin: 150px auto 50px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.about-nisu h1, .about-nisu h2 {
+    color: #00ffff;
+}
+
+.about-nisu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-nisu ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+/* General Page Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* Main Section for About CICS */
+.about-cics {
+    max-width: 800px;
+    margin: 150px auto 50px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.about-cics h1, .about-cics h2 {
+    color: #00ffff;
+}
+
+.about-cics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-cics ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
 
