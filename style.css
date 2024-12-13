@@ -5,6 +5,7 @@ body {
     background: #000;
     color: #fff;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Lightning Effect */
@@ -218,3 +219,249 @@ header nav ul li a:hover {
         width: 90%;
     }
 }
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* Favorite Pictures Section */
+#favorite-pictures {
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    height: auto;
+    flex-direction: column;
+}
+
+/* Gallery Grid - 3x3 Grid Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+    gap: 20px; /* Space between items */
+    margin: 0 auto; /* Centers the gallery horizontally */
+    max-width: 1200px; /* Limits the max width of the gallery */
+    justify-content: center; /* Centers items in the grid horizontally */
+    align-items: center; /* Centers items vertically */
+}
+
+/* Each Picture Item */
+.picture-item {
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #00ffff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image Inside Picture Item */
+.picture-item img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Picture Item Hover Effect */
+.picture-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+.picture-item:hover img {
+    transform: scale(1.1); /* Zoom effect on image */
+}
+
+/* Caption Style */
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.picture-item:hover .caption {
+    opacity: 1;
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #00ffff;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #favorite-pictures h1 {
+        font-size: 28px;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+
+    /* Adjust for smaller screens */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust further for very small screens */
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+/* Favorite Movies Section */
+#favorite-movies {
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#favorite-movies h1 {
+    font-size: 36px;
+    color: #00ffff;
+    margin-bottom: 20px;
+}
+
+/* Movies Gallery Grid */
+.movies-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 1200px;
+    justify-content: center; /* Center the grid horizontally */
+}
+
+.movie-item {
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #00ffff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+.movie-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Caption Style */
+.movie-item .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.movie-item:hover .caption {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .movies-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .movies-gallery {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
