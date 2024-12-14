@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             // Use EmailJS to send the email
-            emailjs.send('service_fvhxcxo', 'template_7dhggsh', templateParams)
+            emailjs.send('service_fvhxcxo', 'template_f6zpkja', templateParams)
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Message sent successfully!');
