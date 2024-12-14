@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initialize EmailJS
 document.addEventListener("DOMContentLoaded", () => {
-    emailjs.init("your_user_id_here"); // Replace with your actual EmailJS User ID
+    emailjs.init("service_fvhxcxo"); // Replace with your actual EmailJS User ID
 });
 
 // Send Email on Button Click
