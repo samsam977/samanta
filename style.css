@@ -560,14 +560,93 @@ footer {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
 }
+/* Music Videos Section Styling */
+#music-videos {
+    padding: 30px;
+    text-align: center;
+    background: lightblue;
+}
+
+#music-videos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1e2a47;
+    font-family: 'Arial', sans-serif;
+}
+
+#music-videos p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Grid Container */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    grid-auto-rows: minmax(240px, auto); /* Flexible row height */
+    transition: all 0.3s ease;
+}
+
+/* Individual Video Item Styling */
+.video-item {
+    background: linear-gradient(135deg, #00aaff, #0077b6);
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hover Effects for Video Items */
+.video-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Video Title Styling */
+.video-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* Video Player Styling */
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-item video:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    .container {
-        width: 100%;
-        padding: 0 10px;
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
 }
 
+@media (max-width: 480px) {
+    .video-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
 
